@@ -1,0 +1,162 @@
+@import "media-queries";
+
+
+
+
+
+#container3{
+    position: absolute;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 500px;
+   width: 270px;
+    z-index: -2;
+   padding: 80px 30px;
+   box-shadow: 1px -2px 1px rgb(214, 210, 210);
+      border-radius: 20px;
+      background-color: black;
+      margin-left: 30px;
+      overflow: hidden;
+    animation-duration: 1.5s;
+      animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    backface-visibility: hidden;
+  
+    
+   
+h2{
+    z-index: 1;
+    color: rgb(147, 241, 134);;
+}
+p{
+    z-index: 1;
+    color: white;
+}
+      &::before{
+        content: '';
+        position: absolute;
+        width: 180px;
+        height: 120%;
+        background: rgb(147, 241, 134);;
+        animation: border-light 10s linear infinite;
+    
+    }
+    
+    &::after{
+        content: '';
+        position: absolute;
+       background: black;
+        inset: 1px;
+        border-radius: 20px;
+    
+    }
+
+
+
+// keyframes border-light.
+
+@keyframes border-light {
+    
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+    }
+
+// keyframes card-move.
+
+
+    @keyframes container {
+        
+from{
+    transform: translate(0);
+  
+}
+to{
+    
+    transform: 
+    translate(-382px)
+    rotateX(30deg)
+    translateY(180px)
+    scale(1.5);
+    }
+}
+
+    @keyframes containerback{
+        
+        from{
+            transform: 
+            translate(-382px)
+            rotateX(30deg)
+            translateY(180px)
+            scale(1.5);
+          
+        }
+        to{
+           transform: translate(0);
+    
+           
+        }
+            
+    }
+
+    //Responsive code.
+
+@include table{
+
+    
+    top: 20px;
+    height: 300px;
+    width: 170px;
+    
+     p{
+         font-size: 0.7rem;
+     }
+     h2{
+         font-size: 18px;
+     }
+     @keyframes container {
+        
+        from{
+            transform: translate(0);
+          
+        }
+        to{
+            
+            transform: 
+            translateX(-100px)
+            translateY(255px)
+            scale(1.2); 
+            
+            }
+        }
+        
+            @keyframes containerback{
+                
+                from{
+                    transform: 
+                    translateX(-100px)
+                    translateY(240px)
+                    scale(1.2); 
+                  
+                }
+                to{
+                   transform: translate(0);
+            
+                   
+                }
+                    
+            }
+     
+
+    }
+}
+
+
+        
