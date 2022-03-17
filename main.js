@@ -2,14 +2,14 @@
 
 let contact = document.getElementById('contact');
 let container2 = document.getElementById('container2');
-let me = document.getElementById('me');
+let Projects = document.getElementById('Projects');
 let container3 = document.getElementById('container3');
 
 
 
 var a = 1;
 
-projects.addEventListener('click', () => {
+    Projects.addEventListener('click', () => {
     a++;
     if(a % 2 === 0){
         container3.style.animationName = 'container';

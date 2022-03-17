@@ -13,11 +13,10 @@
    height: 500px;
    width: 270px;
     z-index: -2;
-   padding: 80px 30px;
+   padding: 15px;
    box-shadow: 1px -2px 1px rgb(214, 210, 210);
       border-radius: 20px;
       background-color: black;
-      margin-left: 30px;
       overflow: hidden;
     animation-duration: 1.5s;
       animation-timing-function: linear;
@@ -25,8 +24,49 @@
     animation-fill-mode: forwards;
     backface-visibility: hidden;
   
+.projects-grid{
+height: 80%;
+width: 100%;
+display: grid;
+gap: .3em;
+grid-template-columns: repeat(2, 1fr);
+align-content: center;
+z-index: 2;
+
+
+    div{
+        height: 150px;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center ;
     
-   
+        
+    }
+
+.one{
+    background: yellow;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.two{
+    background: blue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.three{
+    background: green;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.four{
+    background: tomato;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+}
 h2{
     z-index: 1;
     color: rgb(147, 241, 134);;
@@ -79,7 +119,7 @@ from{
   
 }
 to{
-    
+    z-index: 2;
     transform: 
     translate(-382px)
     rotateX(30deg)
@@ -114,10 +154,21 @@ to{
     top: 20px;
     height: 300px;
     width: 170px;
-    
-     p{
-         font-size: 0.7rem;
-     }
+
+.projects-grid{
+padding-top: 10px;
+grid-template-columns: repeat(1, 1fr);
+div{
+
+height: 50px;
+width: 100%;
+font-size: .7em;
+
+}
+
+}
+
+
      h2{
          font-size: 18px;
      }
@@ -128,7 +179,7 @@ to{
           
         }
         to{
-            
+            z-index: 0;
             transform: 
             translateX(-100px)
             translateY(255px)
